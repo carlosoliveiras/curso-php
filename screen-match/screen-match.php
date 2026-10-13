@@ -53,3 +53,5 @@ var_dump($filme['nome']);
 $posicaoDoisPontos = strpos($filme['nome'], ':');
 var_dump($posicaoDoisPontos);
 var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
+
+var_dump(json_decode('{"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-her\u00f3i"}', true));
