@@ -23,7 +23,7 @@ var_dump($filme);
 
 echo $filme->media() . "\n";
 
-echo $filme->anoLancamento();
+echo $filme->anoLancamento;
 
 
 echo PHP_EOL;

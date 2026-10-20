@@ -3,9 +3,9 @@
 class Filme {
 
     public function __construct(
-        private string $nome,
-        private int $anoLancamento,
-        private string $genero,
+        public readonly string $nome,
+        public readonly int $anoLancamento,
+        public readonly string $genero,
     ){
         $this->notas = [];
     }
@@ -20,10 +20,5 @@ class Filme {
         $media = (array_sum($this->notas)) / count($this->notas);
 
         return $media;
-    }
-
-    public function anoLancamento(): int
-    {
-        return $this->anoLancamento;
     }
 }
