@@ -1,21 +1,29 @@
 <?php
 
 class Filme {
-    public string $nome;
-    public int $anoLancamento;
-    public string $genero;
-    public float $media;
-    public array $notas = [];
 
-    function avlaiar(float $nota)
+    public function __construct(
+        private string $nome,
+        private int $anoLancamento,
+        private string $genero,
+    ){
+        $this->notas = [];
+    }
+
+    public function avaliar(float $nota)
     {
         $this->notas[] = $nota;
     }
 
-    function media(): float
+    public function media(): float
     {
         $media = (array_sum($this->notas)) / count($this->notas);
 
         return $media;
+    }
+
+    public function anoLancamento(): int
+    {
+        return $this->anoLancamento;
     }
 }
