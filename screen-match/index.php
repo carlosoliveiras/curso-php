@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . '/src/Modelo/Genero.php';
 require __DIR__ . '/src/Modelo/Filme.php';
 
 echo "Bem vindo ao screen match!" . PHP_EOL;
@@ -7,7 +8,7 @@ echo "Bem vindo ao screen match!" . PHP_EOL;
 $filme = new Filme(
     "Thor",
     2021,
-    "Super-Héroi"
+    Genero::SuperHeroi,
 );
 
 //$filme->nome = "Thor";
